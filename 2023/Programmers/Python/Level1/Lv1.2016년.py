@@ -1,6 +1,6 @@
 # Level1 Programmers
 # 04 2016년
-
+# https://school.programmers.co.kr/learn/courses/30/lessons/12901
 def solution(a, b):
     count=0
     num=0
