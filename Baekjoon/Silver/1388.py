@@ -12,17 +12,17 @@ import sys
 def dfs(x, y):
     visited[x][y] = True
     
-    if graph[x][y]=='-':
-        if y+1<m and graph[x][y+1]=='-' and visited[x][y+1]==False:
+    if graph[x][y] == '-':
+        if y+1<m and graph[x][y+1]=='-' and visited[x][y+1] == False:
             dfs(x, y+1)
 
-    if graph[x][y]=='|':
-        if x+1<n and graph[x+1][y]=='|' and visited[x+1][y]==False:
+    if graph[x][y] == '|':
+        if x+1<n and graph[x+1][y] == '|' and visited[x+1][y] == False:
             dfs(x+1, y)
             
 n, m = map(int, sys.stdin.readline().split())
 graph = []
-visited=[[False for _ in range(m)] for _ in range(n)]
+visited = [[False for _ in range(m)] for _ in range(n)]
 count = 0
 
 for _ in range(n):
@@ -30,7 +30,7 @@ for _ in range(n):
     
 for i in range(n):
     for j in range(m):
-        if visited[i][j]==False:
+        if visited[i][j] == False:
             dfs(i, j)
             count+=1
 
